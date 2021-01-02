@@ -3,67 +3,20 @@
 
 @import "{{ site.theme }}";
 
-@mixin background-mirror(
-  $position: 0%,
-  $size: auto,
-  $axis: horizontal 
-) {
-
-  background-size: 0; // Hide 'true' background
-  position: relative;
-  // Seeing weird bug in Chrome with values other than `no-repeat`
-  background-repeat: no-repeat;
-  
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-image: inherit;
-    background-size: $size;
-    background-repeat: inherit;
-    @if ($axis == "horizontal") {  
-      background-position: 100% $position;
-    } @elseif ($axis == "vertical") {
-      background-position: $position 100%;
-    }
-    
-  }
-
-  &::before {
-    @if ($axis == "horizontal") {  
-      right: 50%;
-    } @elseif ($axis == "vertical") {
-      bottom: 50%;
-    }
-  }
-
-  &::after {
-    @if ($axis == "horizontal") {  
-      left: 50%;
-      transform: scaleX(-1);
-    } @elseif ($axis == "vertical") {
-      top: 50%;
-      transform: scaleY(-1);
-    }
-  }
-}
-
 header h1, h2, h3 {
-  color: #4dfefd !important;
+  color: #ffff00 !important;
 }
 
 header {
   background-image: url('banner.jpg');
-  @include background-mirror(50%, cover);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 20vh;
 }
 
 .banner {
   background-color: rgba(255, 255, 255, 0.6);
   display: inline-block;
   width: auto;
+  padding: 0 20px 0 40px;
 }
