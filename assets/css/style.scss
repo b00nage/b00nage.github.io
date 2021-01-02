@@ -8,12 +8,13 @@ header h1, h2, h3 {
 }
 
 header {
-  background-image: url('banner.png');
+  background-image: url('banner.jpg');
   background-repeat: repeat-y;
   background-position: top left;
 }
 
 .banner {
-  background-color: white;
-  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: inline-block;
+  width: auto;
 }
