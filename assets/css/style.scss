@@ -16,5 +16,9 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 20vh;
-  border-bottom: none;
+  border-bottom: none !important;
+}
+
+body a {
+  color: #ffff80
 }
