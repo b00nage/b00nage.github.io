@@ -3,14 +3,19 @@
 
 @import "{{ site.theme }}";
 
+@mixin background-mirror(
+  $position: 0%,
+  $size: auto,
+  $axis: horizontal 
+)
+
 header h1, h2, h3 {
   color: #4dfefd !important;
 }
 
 header {
   background-image: url('banner.jpg');
-  background-repeat: repeat-y;
-  background-position: top left;
+  @include background-mirror(50%, cover);
 }
 
 .banner {
