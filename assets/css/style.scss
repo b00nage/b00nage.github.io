@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 
 h1, h2, h3 {
-  color: #ffcc80 !important;
+  color: #ffff80 !important;
 }
 
 header {
@@ -16,5 +16,5 @@ header {
 }
 
 body a {
-  color: #ffff80
+  color: #ffcc80;
 }
