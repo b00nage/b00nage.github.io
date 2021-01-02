@@ -1,8 +1,10 @@
 ---
 ---
 
+header h1 {
+  color: white !important;
+}
+
 @import "{{ site.theme }}";
 
-header h1 {
-  color: white;//$header;
-}
+
