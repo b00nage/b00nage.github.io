@@ -3,11 +3,7 @@
 
 @import "{{ site.theme }}";
 
-header h1, h2, h3 {
-  color: #ffff00 !important;
-}
-
-p, span {
+h1, h2, h3 {
   color: #ffcc80 !important;
 }
 
