@@ -7,7 +7,51 @@
   $position: 0%,
   $size: auto,
   $axis: horizontal 
-)
+) {
+
+  background-size: 0; // Hide 'true' background
+  position: relative;
+  // Seeing weird bug in Chrome with values other than `no-repeat`
+  background-repeat: no-repeat;
+  
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: inherit;
+    background-size: $size;
+    background-repeat: inherit;
+    @if ($axis == "horizontal") {  
+      background-position: 100% $position;
+    } @elseif ($axis == "vertical") {
+      background-position: $position 100%;
+    }
+    
+  }
+
+  &::before {
+    @if ($axis == "horizontal") {  
+      right: 50%;
+    } @elseif ($axis == "vertical") {
+      bottom: 50%;
+    }
+  }
+
+  &::after {
+    @if ($axis == "horizontal") {  
+      left: 50%;
+      transform: scaleX(-1);
+    } @elseif ($axis == "vertical") {
+      top: 50%;
+      transform: scaleY(-1);
+    }
+  }
+}
 
 header h1, h2, h3 {
   color: #4dfefd !important;
