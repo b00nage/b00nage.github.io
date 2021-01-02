@@ -1,5 +1,7 @@
 ---
 ---
-$header: #6a9fb5 !default;
+
 @import "{{ site.theme }}";
-$header: #6a9fb5 !default;
+header h1 {
+  color: #6a9fb5 !default;
+}
