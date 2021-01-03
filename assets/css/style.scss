@@ -6,7 +6,7 @@
 }
 
 #header_wrap {
-  background-image: url(banner.jpg);
+  background-image: url('banner.jpg');
 }
 
 @import "{{ site.theme }}";
