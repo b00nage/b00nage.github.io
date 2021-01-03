@@ -3,6 +3,11 @@
 
 @import "{{ site.theme }}";
 
+body {
+    background: #151515 url('https://pages-themes.github.io/hacker/assets/images/bkg.png') 0 0;
+    color: #eaeaea;
+}
+
 .inner {
   max-width: 800px;
 }
@@ -35,9 +40,9 @@ h1 {
 .btn {
   box-sizing: border-box;
   border-radius: 0px 8px 8px 0px;
-  background-color: #222222;
+  background-color: #eaeaea;
   font-family: misfits;
-  color: white;
+  color: #151515;
   padding: 15px;
   font-size: 25px;
 }
