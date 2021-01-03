@@ -150,3 +150,9 @@ pre, code {
     color: #888;
 }
 
+@media only screen and (max-width: 1000px) {
+  .btn-grp {
+  max-width: 1000px;
+  position: relative;
+}
+}
